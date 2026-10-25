@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Gramaticescu – Descarcă jocul</title>
+<script>
+/* Trimite automat fiecare telefon la magazinul potrivit. Pe calculator, pagina arată ambele linkuri. */
+(function () {
+  var IOS = 'https://apps.apple.com/app/id6826853390';
+  var ANDROID = 'https://play.google.com/store/apps/details?id=ro.earthsingularity.gramaticescu';
+  var ua = navigator.userAgent || '';
+  var isIOS = /iPhone|iPad|iPod/i.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
+  var isAndroid = /Android/i.test(ua);
+  if (isIOS) location.replace(IOS);
+  else if (isAndroid) location.replace(ANDROID);
+})();
+</script>
+<style>
+  :root { --ink:#1f2a44; --blue:#2f6fd6; --yellow:#ffd23f; --red:#e5484d; }
+  * { box-sizing:border-box; }
+  body { margin:0; min-height:100vh; display:flex; align-items:center; justify-content:center; padding:24px 16px;
+         background:linear-gradient(115deg,#3a7be0 0%,#2f6fd6 45%,#2457b8 100%); color:#fff;
+         font:600 17px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; text-align:center; }
+  main { max-width:460px; width:100%; }
+  .logo { font-weight:900; font-size:clamp(30px,9vw,44px); letter-spacing:1px; margin:0 0 6px; }
+  .logo .g { color:var(--yellow); } .logo .e { color:var(--red); }
+  .logo span { -webkit-text-stroke:6px var(--ink); paint-order:stroke fill; }
+  p { margin:0 0 26px; opacity:.92; }
+  .stores { display:flex; flex-direction:column; gap:12px; align-items:center; }
+  .stores a { display:block; width:100%; max-width:300px; padding:14px 18px; border-radius:14px; background:#000; color:#fff;
+              text-decoration:none; border:2px solid #a6a6a6; font-weight:700; }
+  .stores small { display:block; font-weight:500; font-size:12px; opacity:.8; }
+  .note { margin-top:26px; font-size:13px; opacity:.75; }
+</style>
+</head>
+<body>
+<main>
+  <h1 class="logo"><span class="g">GRAMATIC</span><span class="e">ESCU</span></h1>
+  <p>Gratuit · Fără reclame · Fără cont</p>
+  <div class="stores">
+    <a href="https://apps.apple.com/app/id6826853390"><small>Descarcă din</small>App Store</a>
+    <a href="https://play.google.com/store/apps/details?id=ro.earthsingularity.gramaticescu"><small>Disponibil pe</small>Google Play</a>
+  </div>
+  <p class="note">De pe telefon, pagina te duce automat în magazinul potrivit.</p>
+</main>
+</body>
+</html>
